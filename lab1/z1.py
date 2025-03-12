@@ -39,4 +39,4 @@ print("Physical: ", physical, checkBiogram(physical, physicalTomorrow, "physical
 print("Emotional: ", emotional, checkBiogram(emotional, emotionalTomorrow, "emotional"))
 print("Intellectual: ", intellectual, checkBiogram(intellectual, intellectualTomorrow, "intellectual"))
 
-#2h ale nie jestem pewien
+#made it in an hour to 2hours sth like that

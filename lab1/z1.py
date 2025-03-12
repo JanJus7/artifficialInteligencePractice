@@ -35,8 +35,8 @@ intellectual = math.sin((2 * math.pi * days_lived) / 33)
 intellectualTomorrow = math.sin((2 * math.pi * (days_lived + 1)) / 33)
 
 
-print("Physical: ", physical, checkBiogram(physical, physicalTomorrow, "physical"))
-print("Emotional: ", emotional, checkBiogram(emotional, emotionalTomorrow, "emotional"))
-print("Intellectual: ", intellectual, checkBiogram(intellectual, intellectualTomorrow, "intellectual"))
+print(f"Physical: {physical:.2f}.", checkBiogram(physical, physicalTomorrow, "physical"))
+print(f"Emotional:  {emotional:.2f}.", checkBiogram(emotional, emotionalTomorrow, "emotional"))
+print(f"Intellectual: {intellectual:.2f}.", checkBiogram(intellectual, intellectualTomorrow, "intellectual"))
 
 #made it in an hour to 2hours sth like that

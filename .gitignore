@@ -176,3 +176,7 @@ cython_debug/
 dogs-cats-mini
 
 .idea
+
+.python-version
+
+.venv

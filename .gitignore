@@ -185,4 +185,5 @@ dogs-cats-mini
 
 data/
 
-cat_dog_model.*
+*.h5
+*.keras

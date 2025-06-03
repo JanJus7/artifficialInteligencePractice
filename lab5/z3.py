@@ -42,7 +42,7 @@ train_data = train_gen.flow_from_directory(
     "data/train", target_size=(150, 150), batch_size=32, class_mode='binary'
 )
 val_data = val_gen.flow_from_directory(
-    "data/val", target_size=(150, 150), batch_size=32, class_mode='binary', shuffle='false'
+    "data/val", target_size=(150, 150), batch_size=32, class_mode='binary', shuffle=False
 )
 
 model = Sequential([

@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.utils import plot_model
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import plot_model
 
 # Load the iris dataset
 iris = load_iris()

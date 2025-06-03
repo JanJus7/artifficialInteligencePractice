@@ -180,3 +180,5 @@ dogs-cats-mini
 .python-version
 
 .venv
+
+.vscode/

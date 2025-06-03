@@ -1,12 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from tensorflow.keras.datasets import mnist
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Conv2D, Flatten, MaxPooling2D
-from tensorflow.keras.utils import to_categorical
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Conv2D, Flatten, MaxPooling2D
+from keras.utils import to_categorical
 from sklearn.metrics import confusion_matrix
-from tensorflow.keras.callbacks import History, ModelCheckpoint
+from keras.callbacks import History, ModelCheckpoint
 
 # Load dataset
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()

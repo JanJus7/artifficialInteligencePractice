@@ -9,7 +9,9 @@ from sklearn.metrics import confusion_matrix, classification_report
 import shutil
 import random
 from pathlib import Path
+import shutil
 
+shutil.rmtree("data", ignore_errors=True)
 
 def prepare_data(src_dir, train_dir, val_dir, split=0.8):
     Path(train_dir, "cats").mkdir(parents=True, exist_ok=True)
@@ -40,7 +42,7 @@ train_data = train_gen.flow_from_directory(
     "data/train", target_size=(150, 150), batch_size=32, class_mode='binary'
 )
 val_data = val_gen.flow_from_directory(
-    "data/val", target_size=(150, 150), batch_size=32, class_mode='binary'
+    "data/val", target_size=(150, 150), batch_size=32, class_mode='binary', shuffle='false'
 )
 
 model = Sequential([
@@ -88,5 +90,8 @@ for i in errors[:5]:
     img_path = os.path.join("data/val", filenames[i])
     img = plt.imread(img_path)
     plt.imshow(img)
-    plt.title(f'Label: {true_labels[i]}, Predicted: {preds[i][0]}')
+    plt.axis('off')
+    pred_label = 'dog' if preds[i][0] == 1 else 'cat'
+    true_label = 'dog' if true_labels[i] == 1 else 'cat'
+    plt.title(f'Prawda: {true_label}, Pred: {pred_label}')
     plt.show()

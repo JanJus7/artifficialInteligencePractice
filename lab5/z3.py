@@ -58,7 +58,7 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']
 
 history = model.fit(train_data, validation_data=val_data, epochs=10)
 
-model.save('cat_dog_model.h5')
+model.save('cat_dog_model.keras')
 
 plt.plot(history.history['accuracy'], label='train acc')
 plt.plot(history.history['val_accuracy'], label='val acc')

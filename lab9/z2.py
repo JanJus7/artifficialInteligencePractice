@@ -102,18 +102,13 @@ def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=17, n_batch
         if epoch_num == start_epoch + n_epochs:
             summarize_performance(epoch_num - 1, g_model, d_model, dataset, latent_dim)
 
-# Parametry
 latent_dim = 100
 dataset = load_real_samples()
 
-# Załaduj istniejący generator
 g_model = load_model("generator_model_030.keras")
-# Zbuduj nowy dyskryminator
 d_model = define_discriminator()
-# Połącz ponownie w GAN
 gan_model = define_gan(g_model, d_model)
 
-# Trenuj od epoki 14 do 30
 start = time.time()
 train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=20, n_batch=256, start_epoch=30)
 end = time.time()
